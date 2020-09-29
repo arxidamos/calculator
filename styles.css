@@ -18,7 +18,8 @@ body {
     background-color: black;
 }
 
-.item-number, .item-special, .item-symbol, .item-display {
+/* .item-number, .item-special, .item-symbol, .item-display { */
+    button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +29,7 @@ body {
     text-align: center;
     border-radius: 6%;
 }
+
 
 .item-display {
     grid-column-start: 1;
@@ -48,9 +50,18 @@ body {
     background-color: dodgerblue;
 }
 
+.item-special:hover, .item-symbol:hover, .item-number:hover {
+    filter: brightness(105%)
+}
+
+.item-special:focus, .item-symbol:focus, .item-number:focus {
+    filter: brightness(110%) contrast(150%);
+}
+
 .item-symbol {
     background-color: coral;
 }
+
 
 .item-number {
     background-color: mediumseagreen ;
