@@ -50,15 +50,15 @@ body {
     background-color: dodgerblue;
 }
 
-.item-special:hover, .item-symbol:hover, .item-number:hover {
+.item-special:hover, .item-symbol:hover, .item-number:hover, .item-equals:hover {
     filter: brightness(105%)
 }
 
-.item-special:focus, .item-symbol:focus, .item-number:focus {
+.item-special:focus, .item-symbol:focus, .item-number:focus, .item-equals:focus {
     filter: brightness(110%) contrast(150%);
 }
 
-.item-symbol {
+.item-symbol, .item-equals {
     background-color: coral;
 }
 
