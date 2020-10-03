@@ -36,6 +36,14 @@ let operandOne = operandTwo = null;
 let symbolOne = symbolTwo = null;
 let result = null;
 
+document.addEventListener('keypress', (e) => {
+
+    let code = e.keyCode;
+    console.log("Code = ", code);
+    const key = document.querySelector(`button[key-code='${code}']`);
+    key.click();
+});
+
 updateDisplay = () => {
     const display = document.querySelector('.item-display'); 
     display.textContent = displayNum;
@@ -68,7 +76,18 @@ buttonClick = () => {
                 inputEquals();
                 updateDisplay();
             }
-
+            else if (buttons[i].id == "%") {
+                inputPercent();
+                updateDisplay();
+            }
+            else if (buttons[i].id == "+/-") {
+                inputSign();
+                updateDisplay();
+            }
+            else if (buttons[i].classList == "item-period") {
+                inputPeriod(buttons[i].value);
+                updateDisplay();
+            }
         });
     }
 }
@@ -176,5 +195,23 @@ inputSymbol = (symbol) => {
     return;
 }
 
+inputPercent = () => {
+    displayNum = (displayNum/100).toString();
+}
+
+inputSign = () => {
+    displayNum = (displayNum*(-1)).toString();
+}
+
+inputPeriod = (value) => {
+    // Check if user wants a 0 starting decimal
+    if (displayNum == '0') {
+        displayNum += value;
+    }
+    // Make sure we dont' already have a decimal
+    else if (!displayNum.includes(".")) {
+        displayNum += value;
+    }
+}
 
 buttonClick();

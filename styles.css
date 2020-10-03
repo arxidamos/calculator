@@ -46,15 +46,15 @@ body {
     justify-content: flex-end;
 }
 
-.item-special {
+.item-special, .item-percent, .item-sign {
     background-color: dodgerblue;
 }
 
-.item-special:hover, .item-symbol:hover, .item-number:hover, .item-equals:hover {
+.item-special:hover, .item-symbol:hover, .item-number:hover, .item-period:hover, .item-equals:hover, .item-percent:hover, .item-sign:hover {
     filter: brightness(105%)
 }
 
-.item-special:focus, .item-symbol:focus, .item-number:focus, .item-equals:focus {
+.item-special:focus, .item-symbol:focus, .item-number:focus, .item-period:focus, .item-equals:focus, .item-percent:focus, .item-sign:focus {
     filter: brightness(110%) contrast(150%);
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 
-.item-number {
+.item-number, .item-period {
     background-color: mediumseagreen ;
 }
 
